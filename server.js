@@ -73,6 +73,20 @@ var initDb = function(callback) {
   });
 };
 
+app.get('/healthz', function (req, res) {
+  // try to initialize the db on every request if it's not already
+  // initialized.
+  if (!db) {
+    initDb(function(err){});
+  }
+  if (db) {
+    res.send('db is working: ' + {dbInfo: dbDetails});
+  } else {
+    res.send('app is working without db');
+  }
+});
+
+
 app.get('/', function (req, res) {
   // try to initialize the db on every request if it's not already
   // initialized.
