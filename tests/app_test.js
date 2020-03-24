@@ -19,7 +19,7 @@ describe('Basic routes tests', function() {
 
     })
 
-    t('GET to /healthz should return 200', function(done){
+    it('GET to /healthz should return 200', function(done){
         chai.request(reqServer)
         .get('/healthz')
         .end(function(err, res) {
