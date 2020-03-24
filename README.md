@@ -1,5 +1,7 @@
 von Mario
 
+to dump mongodb: mongodump --uri=mongodb://userYMI:1J4uXBnW8WndyyUS@172.30.66.111:27017/sampledb
+
 <!-- toc -->
 
 - [Node.js sample app on OpenShift!](#nodejs-sample-app-on-openshift)
